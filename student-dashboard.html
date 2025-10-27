@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - PFAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PFAI Student Dashboard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="student-dashboard.html" class="active">My Profile</a></li>
+            <li><a href="#assessments">My Assessments</a></li>
+            <li><a href="#search">Find Programs</a></li>
+            <li><a href="#documents">My Documents</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="dashboard-card">
+            <h2>Welcome, Student!</h2>
+            <p>Manage your profile and academic information below. This data is based on your <strong>Student Profile</strong> and <strong>Academic Background</strong> tables.</p>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>My Profile & Academics</h2>
+            <form id="student-profile-form">
+                <h3>Personal Information (Student Profile Table)</h3>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" value="Jane">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" value="Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="jane.doe@example.com" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" id="nationality" name="nationality" value="ExampleLand">
+                </div>
+
+                <h3>Academic Background (Academic Background Table)</h3>
+                <div class="form-group">
+                    <label for="educationLevel">Highest Education Level:</label>
+                    <input type="text" id="educationLevel" name="educationLevel" value="High School">
+                </div>
+                <div class="form-group">
+                    <label for="majorSubject">Major/Subject:</label>
+                    <input type="text" id="majorSubject" name="majorSubject" value="Science">
+                </div>
+                <div class="form-group">
+                    <label for="gpaValue">GPA:</label>
+                    <input type="text" id="gpaValue" name="gpaValue" value="3.8">
+                </div>
+                <div class="form-group">
+                    <label for="gpaScale">GPA Scale (e.g., 4.0):</label>
+                    <input type="text" id="gpaScale" name="gpaScale" value="4.0">
+                </div>
+                
+                <button type="submit" class="btn">Update Profile</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Path Finder Bot (PFAI)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

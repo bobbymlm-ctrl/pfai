@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - PFAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PFAI Admin Dashboard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="admin-dashboard.html" class="active">Institutions</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#students">Students</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="dashboard-card">
+            <h2>Add New Institution</h2>
+            <p>This form is based on your <strong>Institutions Table</strong> schema.</p>
+            <form id="add-institution-form">
+                <div class="form-group">
+                    <label for="institutionName">Institution Name:</label>
+                    <input type="text" id="institutionName" name="institutionName" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select id="type" name="type">
+                        <option value="University">University</option>
+                        <option value="College">College</option>
+                        <option value="Online Platform">Online Platform</option>
+                        <option value="Training Center">Training Center</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country">
+                </div>
+                <div class="form-group">
+                    <label for="websiteURL">Website URL:</label>
+                    <input type="url" id="websiteURL" name="websiteURL">
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="isPartner" name="isPartner">
+                    <label for="isPartner">Is this a Partner Institution? (Boolean)</label>
+                </div>
+                <button type="submit" class="btn">Add Institution</button>
+            </form>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>Manage Existing Institutions</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Institution Name</th>
+                        <th>Country</th>
+                        <th>Type</th>
+                        <th>Is Partner?</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Example University</td>
+                        <td>Canada</td>
+                        <td>University</td>
+                        <td>Yes</td>
+                        <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sample College</td>
+                        <td>USA</td>
+                        <td>College</td>
+                        <td>No</td>
+                        <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Path Finder Bot (PFAI)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
